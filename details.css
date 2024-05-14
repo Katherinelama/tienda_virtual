@@ -1,0 +1,489 @@
+/* ------------- CSS General ------------- */
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body,
+html {
+font-family: "Inter", sans-serif;
+margin: 0;
+}
+
+a{
+text-decoration: none;
+}
+
+
+/* ------------- Estilos para el search------------- */
+header {
+  height: 152px;
+  background-color: #ff3b3c;
+}
+
+.search{
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding: 20px 0px;
+}
+
+.search .form {
+box-sizing: border-box;
+display: flex;
+justify-content: center;
+}
+
+.search .form input {
+height: 62px;
+border-radius: 14px;
+border: none;
+width: 505px;
+padding: 20px;
+box-sizing: border-box;
+}
+
+.search .social ul {
+display: flex;
+justify-content: flex-end;
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+.search .social ul li {
+padding: 0 10px;
+}
+
+/* ------------- Sección principal------------- */
+.container{
+  width: 100%;
+  margin: 0 auto;
+  height: inherit;
+  min-height: inherit;
+  }
+
+
+/* ------------- Estilos de la barra de Navegación------------- */
+
+.nav ul {
+display: flex;
+justify-content: space-around;
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+.nav ul li a {
+color: white;
+font-weight: 700;
+text-align: left;
+text-decoration: none;
+}
+
+.nav ul li a:hover {
+text-decoration: underline;
+}
+
+/* ------------- Sección principal ------------- */
+
+main{
+  padding: 50px;
+  height: auto;
+}
+
+main .columns-container{
+  flex: 1;
+  display: flex;
+  justify-content: space-around;  
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.product-images-block,
+.product-description-block,
+.product-checkbout-block{
+  flex: 1;
+}
+
+/* ------------- bloque de imagenes ------------- */
+
+.product-images-block{
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.product-images-block .thumbnail-container {
+  grid-column: 1;
+  overflow: hidden; /* Mantiene la imagen dentro del contenedor */
+  margin: 0px 5px; /* Ajusta el  margen según sea necesario */
+}
+
+.product-images-block .thumbnail-container img{
+  max-width: 100%;
+  height: auto; /* Mantiene la relación de aspecto de la imagen */
+  object-fit: contain; /* Asegura que la imagen se ajuste completamente dentro del contenedor */
+  object-position: center center; /* Centra la imagen en el contenedor */
+
+}
+
+.product-images-block .mainImage{
+  width: 100%;
+  grid-row: 1/5;
+  grid-column: 2/5;
+}
+
+
+
+/* ------------- bloque de detalle descripción del producto ------------- */
+
+.product-description-block .title {
+  color: #333; /* Elige un color adecuado */
+  font-size: 24px; /* Ajusta el tamaño según sea necesario */
+  font-weight: bold;
+  margin-top: 0;
+  word-wrap: break-word;
+}
+
+.product-description-block .selector fieldset{
+  border: 2px #919191 solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+  font-size: 15px;
+  border-radius: 15px;
+  padding-left: 5px;
+  margin-top: 20px;
+}
+
+.product-description-block .selector fieldset select{
+  padding: 5px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.product-description-block .description h1{
+  color: black;
+  font-size: 20px;
+  font-weight: bolder;
+  word-wrap: break-word;
+  margin-top: 20px;
+}
+
+.product-description-block .description p{
+  font-size: 16px;
+  font-weight: lighter;
+  word-wrap: break-word;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+/*-----Bloque de checkout------*/
+
+.product-checkbout-block{
+  background-color: #ebebeb; /* Color de fondo claro */
+  padding: 33px; /* Espaciado interno */
+  border-radius: 2px; /* Bordes ligeramente redondeados */
+}
+
+.checkout-total-label{
+  color: #ff3b3c; /* Color distintivo para el texto 'Total:' */
+  font-weight: 700; /* Fuente en negrita */
+
+}
+.checkout-total-price {
+  font-size: 28px; /* Tamaño grande para el precio */
+  font-weight: 700; /* Fuente en negrita */
+  margin-top: 10px; /* Espacio por encima del precio */
+  margin-bottom: 10px;
+}
+
+.checkout-description {
+  line-height: 20.4px; /* Espaciado de línea para mejorar la legibilidad */
+  word-wrap: break-word; /* Asegura que el texto no desborde el contenedor */
+}
+
+.checkout-policy-list {
+  list-style-type: none; /* Elimina los marcadores de lista */
+  margin-bottom: 30px; /* Espacio debajo de la lista */
+}
+
+.checkout-policy-list li {
+  display: flex; /* Alineación horizontal de íconos y texto */
+  margin: 15px 0; /* Espacio entre elementos de la lista */
+}
+
+.checkout-policy-list li .policy-icon {
+  margin-right: 15px; /* Espacio entre el ícono y el texto */
+}
+
+.checkout-process .top {
+  display: flex; /* Alinea el input y el botón horizontalmente */
+  margin-bottom: 10px; /* Espacio debajo del grupo superior */
+}
+
+.checkout-process .top input {
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  width: 65px;
+  margin-right: 10px;
+  padding: 0 10px 0 20px;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  width: 100%;
+  background: #ff3b3c;
+  color: white;
+  font-weight: bold;
+  border: none;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.btn-outline {
+  width: 100%;
+  border: 1px solid #ff3b3c;
+  color: #ff3b3c;
+  font-weight: bold;
+  height: 40px;
+  border-radius: 10px;
+}
+
+/*Ofertas de la semana*/
+
+.container .ofertas-title{
+  text-align: center;
+  margin: 50px 0px;
+}
+
+.sales-block{
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 50px;
+}
+
+.sales-block h2{
+  grid-row: 1;
+  grid-column: 1/4;
+}
+
+.product-card{
+  background-color: #F5F5F5;
+  border-radius: 14px;
+  max-width: auto;
+  overflow: hidden;
+}
+
+.image-container {
+  height: 250px; /* Altura fija para la imagen */
+  overflow: hidden;
+}
+
+.product-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.product-info{
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.product-title{
+  word-wrap: break-word;
+  display: block;
+  text-align: center;
+  font-size: large;
+  line-height: 22px;
+}
+
+.product-description{
+  display: block;
+  font-size: 16px;
+  text-align: justify;
+  color: #C5095B;
+  margin: 10px 0px;
+}
+.product-price-block{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0px;
+  color: #60005C;
+  font-size: 15px;
+}
+
+.product-price-block .price {
+  font-size: 16px;
+  font-weight: 700;
+  flex: 1;
+}
+
+.product-price-block .discount {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0A0204;
+}
+
+.product-tax-policy{
+  font-size: 10px;
+}
+
+
+
+
+
+
+
+
+/* ------------- Footer ------------- */
+
+footer {
+  min-height: 368px;
+  background-color: #7525A7;
+}
+
+footer .container{
+  display: flex;
+  flex-direction: column;
+}
+
+footer .columns-container{
+flex: 1;
+display: flex;
+justify-content: space-evenly;
+flex-wrap: wrap;
+}
+
+.columns-container .col{
+margin-top: 20px;
+margin-right: 40px;
+}
+
+.columns-container .col ul{
+padding: 0;
+list-style-type: none;
+}
+
+.columns-container .col ul li{
+padding: 5px 0;
+}
+
+.columns-container .col ul li.col-main-item {
+font-weight: bold;
+padding-bottom: 20px;
+}
+
+.columns-container .col ul li a{
+text-decoration: none;
+color: white;
+}
+
+.columns-container .col ul li a:hover {
+text-decoration: underline;
+}
+
+.copyright{
+border-top: 1px solid #ba53fb;
+padding: 30px 0;
+text-align: center;
+color: white;
+font-weight: bold;
+box-sizing: border-box;
+}
+
+/* ------------- medias queries ------------- */
+@media (max-width: 1024px){
+
+main .container{
+  padding: 20px 30px;
+}
+
+.search .form input{
+  width: 300px;
+}
+.container{
+  width: 100%;
+}
+
+.sales-block{
+  grid-template-columns: repeat(2, 1fr);
+}
+
+}
+
+@media (max-width: 768px){
+
+main .container{
+  padding: 20px 50px;
+}
+
+.search .logo img{
+  width: 140px;
+  height: auto;
+}
+
+.search .form input{
+  width: 200px;
+  height: 45px;
+}
+.container{
+  width: 100%;
+}
+
+.title-container span:first-child {
+  font-size: 30px;
+}
+
+.title-container span:last-child {
+  font-size: 80px;
+}
+
+}
+
+@media (max-width: 425px){
+
+main .container{
+  padding: 20px 50px;
+}
+
+.search .logo img{
+  width: 120px;
+  height: auto;
+}
+
+.search .form input{
+  width: 100px;
+  height: 20px;
+}
+
+.title-container span:first-child {
+  font-size: 30px;
+}
+
+.title-container span:last-child {
+  font-size: 80px;
+}
+
+.container{
+  width: 100%;
+}
+
+
+}
